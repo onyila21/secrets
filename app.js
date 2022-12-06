@@ -32,9 +32,8 @@ app.use(passport.initialize());
 
 // Use passport to setup session
 app.use(passport.session());
-async function run() {
 
-await mongoose.connect("mongodb+srv://admin-onyeka:<password>@cluster0.nnfn505.mongodb.net/secretDB", {
+mongoose.connect("mongodb+srv://admin-onyeka:<kach456>@cluster0.nnfn505.mongodb.net/secretDB", {
     useNewUrlParser: true,
 
 
@@ -53,8 +52,7 @@ userSchema.plugin(passportLocalMongoose);
 userSchema.plugin(findOrCreate);
 
 const User = new mongoose.model("User", userSchema);
-await mongoose.model('User').findOne(); // Works!
-}
+
 
 // Simplified Passport/Passport-Local Configuration
 passport.use(User.createStrategy());
