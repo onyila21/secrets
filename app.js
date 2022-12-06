@@ -33,7 +33,7 @@ app.use(passport.initialize());
 // Use passport to setup session
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://admin-onyeka:<kach456>@cluster0.nnfn505.mongodb.net/secretDB", {
+mongoose.connect("mongodb+srv://admin-onyeka:kach456@cluster0.nnfn505.mongodb.net/secretDB", {
     useNewUrlParser: true,
 
 
